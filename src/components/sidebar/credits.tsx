@@ -1,7 +1,8 @@
 import { Coins, Sparkles } from "lucide-react";
+import { getUserCredits } from "~/actions/users";
 
 export default async function Credits() {
-  // const credits = await getUserCredits();
+  const credits = await getUserCredits();
   return (
     <div className="group flex items-center gap-2">
       <div className="flex items-center gap-1.5">
@@ -11,7 +12,7 @@ export default async function Credits() {
         </div>
         <div className="flex flex-col">
           <span className="text-foreground text-sm font-bold transition-colors duration-200 group-hover:text-yellow-600">
-            {/* {credits} */}0
+            {credits}
           </span>
           <span className="text-muted-foreground text-xs leading-tight">
             Credits
